@@ -1,0 +1,4 @@
+com\epam\lab\service\DriverManager.class
+com\epam\lab\service\TestDataReader.class
+com\epam\lab\page\BrowserPage.class
+com\epam\lab\test\BrowserPageTest.class
