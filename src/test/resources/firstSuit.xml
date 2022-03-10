@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suit1">
+  <listeners>
+    <listener class-name="com.epam.lab.suits.listener.TestListener"></listener>
+  </listeners>
+  <test name="PackageWithTenTest">
+    <classes>
+      <class name="com.epam.lab.suits.test.Test1"/>
+    </classes>
+  </test>
+</suite>
