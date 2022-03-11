@@ -1,4 +1,4 @@
-package com.epam.lab.service;
+package com.epam.lab.browserTask.service;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

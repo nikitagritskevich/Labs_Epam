@@ -1,4 +1,4 @@
-package com.epam.lab.service;
+package com.epam.lab.browserTask.service;
 
 import java.util.ResourceBundle;
 

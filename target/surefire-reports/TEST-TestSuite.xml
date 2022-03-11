@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="9.703" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="0.988" tests="10" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.6+8-LTS"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11.0.6\bin"/>
-    <property name="browser" value="firefox"/>
-    <property name="maven.multiModuleProjectDirectory" value="D:\labTask\Labs_Epam"/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\Labs_Epam"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
     <property name="path.separator" value=";"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="env" value="qa"/>
     <property name="user.script" value=""/>
     <property name="user.country" value="RU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\labTask\Labs_Epam"/>
+    <property name="user.dir" value="D:\Labs_Epam"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="java.runtime.version" value="11.0.6+8-LTS"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
@@ -37,6 +35,7 @@
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
     <property name="library.jansi.path" value="D:\apache-maven-3.8.4\lib\jansi-native"/>
+    <property name="surefire.suiteXmlFiles" value="src\test\resources\firstSuit.xml"/>
     <property name="user.home" value="C:\Users\lenovo"/>
     <property name="user.timezone" value="Europe/Moscow"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
@@ -46,7 +45,7 @@
     <property name="java.class.path" value="D:\apache-maven-3.8.4\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dbrowser=firefox -Denv=qa clean test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dsurefire.suiteXmlFiles=src\test\resources\firstSuit.xml clean test"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-11.0.6"/>
     <property name="user.language" value="ru"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -66,5 +65,20 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="checkingPageBrowser" classname="com.epam.lab.test.BrowserPageTest" time="2.615"/>
+  <testcase name="test1" classname="com.epam.lab.suits.test.Test1" time="0.011"/>
+  <testcase name="test10" classname="com.epam.lab.suits.test.Test1" time="0"/>
+  <testcase name="test2" classname="com.epam.lab.suits.test.Test1" time="0.007">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at com.epam.lab.suits.test.Test1.test2(Test1.java:15)
+</failure>
+    <system-out><![CDATA[10 мар. 2022 21:59:29,979 INFO [main] test2 - this test is failure 
+]]></system-out>
+  </testcase>
+  <testcase name="test3" classname="com.epam.lab.suits.test.Test1" time="0"/>
+  <testcase name="test4" classname="com.epam.lab.suits.test.Test1" time="0"/>
+  <testcase name="test5" classname="com.epam.lab.suits.test.Test1" time="0"/>
+  <testcase name="test6" classname="com.epam.lab.suits.test.Test1" time="0"/>
+  <testcase name="test7" classname="com.epam.lab.suits.test.Test1" time="0.001"/>
+  <testcase name="test8" classname="com.epam.lab.suits.test.Test1" time="0"/>
+  <testcase name="test9" classname="com.epam.lab.suits.test.Test1" time="0"/>
 </testsuite>
