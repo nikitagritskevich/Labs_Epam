@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: TestSuite
--------------------------------------------------------------------------------
-Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.988 sec <<< FAILURE! - in TestSuite
-test2(com.epam.lab.suits.test.Test1)  Time elapsed: 0.007 sec  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at com.epam.lab.suits.test.Test1.test2(Test1.java:15)
-
