@@ -37,6 +37,22 @@
       <version>5.0.3</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.epam.reportportal</groupId>
+      <artifactId>agent-java-testng</artifactId>
+      <version>5.1.1</version>
+    </dependency>
+    <!-- TODO Leave only one dependency, depends on what logger you use: -->
+    <dependency>
+      <groupId>com.epam.reportportal</groupId>
+      <artifactId>logger-java-logback</artifactId>
+      <version>5.1.1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.epam.reportportal</groupId>
+      <artifactId>logger-java-log4j</artifactId>
+      <version>5.1.4</version>
+    </dependency>
   </dependencies>
 
   <build>
