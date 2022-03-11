@@ -1,8 +1,8 @@
-package com.epam.lab.test;
+package com.epam.lab.browserTask.test;
 
-import com.epam.lab.page.BrowserPage;
-import com.epam.lab.service.DriverManager;
-import com.epam.lab.service.TestDataReader;
+import com.epam.lab.browserTask.service.DriverManager;
+import com.epam.lab.browserTask.service.TestDataReader;
+import com.epam.lab.browserTask.page.BrowserPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;

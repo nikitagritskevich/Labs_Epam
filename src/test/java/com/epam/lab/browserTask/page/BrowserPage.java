@@ -1,6 +1,6 @@
-package com.epam.lab.page;
+package com.epam.lab.browserTask.page;
 
-import com.epam.lab.service.TestDataReader;
+import com.epam.lab.browserTask.service.TestDataReader;
 import org.openqa.selenium.WebDriver;
 
 public class BrowserPage {
