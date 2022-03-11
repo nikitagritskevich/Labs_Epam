@@ -1,4 +1,7 @@
-com\epam\lab\service\DriverManager.class
-com\epam\lab\service\TestDataReader.class
-com\epam\lab\page\BrowserPage.class
-com\epam\lab\test\BrowserPageTest.class
+com\epam\lab\browserTask\page\BrowserPage.class
+com\epam\lab\suits\listener\TestListener.class
+com\epam\lab\suits\test\Test2.class
+com\epam\lab\browserTask\service\TestDataReader.class
+com\epam\lab\browserTask\test\BrowserPageTest.class
+com\epam\lab\suits\test\Test1.class
+com\epam\lab\browserTask\service\DriverManager.class
