@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration>
+<Configuration packages="com.epam.ta.reportportal.log4j.appender">
   <Appenders>
     <Console name="Console">
       <PatternLayout>
@@ -11,10 +11,16 @@
         <Pattern>%d %p %c{1} [%t] %m%n</Pattern>
       </PatternLayout>
     </File>
+    <ReportPortalLog4j2Appender name="ReportPortalAppender">
+      <PatternLayout>
+        <Pattern>%d %p %c{1} [%t] %m%n</Pattern>
+      </PatternLayout>
+    </ReportPortalLog4j2Appender>
   </Appenders>
   <Loggers>
-    <Root level="trace">
+    <Root level="info">
       <AppenderRef ref="Console"/>
+      <AppenderRef ref ="ReportPortalAppender"/>
       <AppenderRef ref="File"/>
     </Root>
   </Loggers>
