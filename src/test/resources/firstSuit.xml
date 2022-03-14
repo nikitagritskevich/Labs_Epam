@@ -2,6 +2,7 @@
 
 <suite name="Suit1">
   <listeners>
+    <listener class-name="com.epam.reportportal.testng.ReportPortalTestNGListener"/>
     <listener class-name="com.epam.lab.suits.listener.TestListener"></listener>
   </listeners>
   <test name="PackageWithTenTest">
