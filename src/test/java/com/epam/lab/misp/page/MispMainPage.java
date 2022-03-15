@@ -18,9 +18,4 @@ public class MispMainPage {
     return new SectionEditPage();
   }
 
-
-  public String getTitle() {
-    return $x("//*[@data-test='template-title']").text();
-  }
-
 }
