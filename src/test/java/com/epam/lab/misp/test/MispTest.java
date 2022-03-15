@@ -12,7 +12,7 @@ public class MispTest {
 
   @BeforeClass(alwaysRun = true)
   public void createRandomSection() {
-    sectionPage = new AuthorizationPage().openPage().logInAsAdmin().selectRandomSection();
+    sectionPage = new AuthorizationPage().openPage().logInAsAdmin().navigateToRandomSection();
   }
 
   @Test(description = "Checking navigation button is active")

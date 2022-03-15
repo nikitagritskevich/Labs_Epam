@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class MispMainPage {
 
-  public SectionEditPage selectRandomSection() {
+  public SectionEditPage navigateToRandomSection() {
     List<SelenideElement> tableElements = $x("//tbody[@class='MuiTableBody-root']").shouldBe(
         Condition.visible).$$("tr");
     SelenideElement randomSection = tableElements.get(
