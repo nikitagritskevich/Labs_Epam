@@ -2,8 +2,7 @@ package com.epam.lab.api.service.figureTask.figure;
 
 public class Cylinder extends FigureWithRadius {
 
-    double height;
-
+    private double height;
 
     public Cylinder(double radius, double height) {
         super(radius);

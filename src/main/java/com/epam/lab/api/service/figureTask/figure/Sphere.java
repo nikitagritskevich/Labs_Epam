@@ -11,5 +11,4 @@ public class Sphere extends FigureWithRadius {
     public void calculationArea() {
         area =  4 * Math.PI * Math.pow(radius, 2);
     }
-
 }
