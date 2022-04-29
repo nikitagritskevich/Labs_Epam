@@ -17,7 +17,7 @@ public class FilesVisitor extends SimpleFileVisitor<Path> {
 
     private List<Integer> testsList;
     private final String annotation = "@Test";
-    private final Pattern pattern = Pattern.compile("[1-9]{1,}");
+    private final Pattern pattern = Pattern.compile("[0-9]{1,}");
     private List<String> tempList;
 
     public FilesVisitor() {
