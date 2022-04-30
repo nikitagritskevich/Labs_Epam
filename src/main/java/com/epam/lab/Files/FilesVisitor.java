@@ -17,12 +17,17 @@ public class FilesVisitor extends SimpleFileVisitor<Path> {
 
     private List<Integer> testsList;
     private final String annotation = "@Test";
-    private final Pattern pattern = Pattern.compile("[0-9]{1,}");
+    private final String idFormat = "%s*[0-9,.]+";
+    private Pattern idPattern;
+    private final Pattern descriptionPattern = Pattern.compile("description\\s*=\\s*\"\\w*-[0-9,. ]+.+[0-9]");
     private List<String> tempList;
+    private String testTdSeparator;
 
-    public FilesVisitor() {
-        testsList = new ArrayList<>();
-        tempList = new ArrayList<>();
+    public FilesVisitor(String testIdSeparator) {
+        this.testsList = new ArrayList<>();
+        this.tempList = new ArrayList<>();
+        this.testTdSeparator = testIdSeparator;
+        this.idPattern = Pattern.compile(String.format(idFormat, testIdSeparator));
     }
 
     @Override
@@ -48,9 +53,18 @@ public class FilesVisitor extends SimpleFileVisitor<Path> {
 
     private void getNumbersTest(List<String> tempList) {
         for (int i = 0; i < tempList.size(); i++) {
-            Matcher matcher = pattern.matcher(tempList.get(i));
+            Matcher descriptionMatcher = descriptionPattern.matcher(tempList.get(i));
+            while(descriptionMatcher.find()){
+                tempList.set(i, descriptionMatcher.group().replaceAll("description\\s+=\\s+\"", ""));
+            }
+
+                Matcher matcher = idPattern.matcher(tempList.get(i));
             while (matcher.find()) {
-                testsList.add(Integer.parseInt(matcher.group()));
+                String[] ids = matcher.group().split(",");
+                for (String element : ids) {
+                    String result = element.replaceAll(testTdSeparator, "");
+                    testsList.add(Integer.parseInt(result));
+                }
             }
         }
     }
