@@ -10,10 +10,11 @@ public class Runner {
     public static void main(String[] args) {
         try(Scanner scanner = new Scanner(System.in)) {
             System.out.println("Enter file path");
-            Path path = Path.of(scanner.nextLine());
+            Path path = Path.of("D:\\\\Projects\\\\misp-test-automation\\\\src\\\\test\\\\java\\\\com\\\\epam\\\\misp");
 
-            FilesVisitor visitor = new FilesVisitor();
+            FilesVisitor visitor = new FilesVisitor("EPMCHRTMIS-");
             Files.walkFileTree(path, visitor);
+            System.out.println(visitor.getTestsList().size());
             visitor.getTestsList().forEach(s -> System.out.print(s + " "));
         }catch (IOException e){
             e.printStackTrace();
